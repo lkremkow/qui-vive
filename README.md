@@ -18,11 +18,13 @@
 
 ## Installation
 
-   `git clone git@github.com:lkremkow/qui-vive.git qui-vive`
+   `git clone https://github.com/lkremkow/qui-vive.git qui-vive`
 
    `cd qui-vive`
 
    Edit the `settings.sh` file to give your username, password, and select your Qualys API address.
+
+   Edit `monitor_traffic.sh` and replace X.X.X.X with the IP of the monitoring systems itself
 
 
 ## Usage

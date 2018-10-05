@@ -2,7 +2,9 @@
 
 source settings.sh
 
-sudo tcpdump -l -tt --interface=any -nn -q 'tcp[tcpflags] & 18 = 2' |
+# be sure to replace X.X.X.X with the IP of the monitoring sytems itself
+
+sudo tcpdump -l -tt --interface=any -nn -q 'tcp[tcpflags] & 18 = 2 and not host X.X.X.X' |
 while read -r line
 do
   cleaned_line=$( echo "$line" | sed 's/[\.:]/ /g' )
